@@ -1,0 +1,40 @@
+# Build output
+*.o
+*.obj
+*.exe
+a.out
+main_file
+reverse_str
+length_str
+ascii_add_2_str
+sort_str
+capitalize_str
+zombie-survival
+office-hours
+cricket-scheduling
+circular-pipes
+mfq-scheduler
+
+# Runtime files created by the programs
+text_file.txt
+dummy_file.txt
+input.txt
+output.txt
+expenses.csv
+expenses.dat
+log_A.txt
+log_B.txt
+log_C.txt
+log_D.txt
+app_usage.log
+
+# Editor and OS junk
+*~
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+__pycache__/
+*.pyc

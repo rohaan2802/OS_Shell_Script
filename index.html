@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Operating Systems – Shell Scripting (CS-2006) | Mohammad Rohaan</title>
+<meta name="description" content="Operating Systems lab work from Spring 2025 at FAST-NUCES: Bash scripts and C/C++ programs on processes, pipes, threads and CPU scheduling.">
+<meta name="author" content="Mohammad Rohaan">
+<meta name="theme-color" content="#f3f7f6">
+<link rel="canonical" href="https://rohaan2802.github.io/OS-ShellScripting/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Operating Systems – Shell Scripting (CS-2006)">
+<meta property="og:description" content="Bash scripts and C/C++ programs on processes, pipes, threads and CPU scheduling – CS-2006, FAST-NUCES, Spring 2025.">
+<meta property="og:url" content="https://rohaan2802.github.io/OS-ShellScripting/">
+<meta property="og:image" content="https://rohaan2802.github.io/OS-ShellScripting/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>(function(){try{var t=localStorage.getItem('os-theme');var q=new URLSearchParams(location.search).get('theme');if(q==='dark'||q==='light')t=q;if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<link rel="stylesheet" href="assets/css/style.css">
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+<div class="container nav-inner">
+<a class="brand" href="#top" aria-label="Operating Systems home"><span class="brand-logo" aria-hidden="true">OS</span><span>CS-2006</span></a>
+<ul class="nav-links" id="nav-links">
+<li><a href="#links">Links</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#a1">Assignment 1</a></li>
+<li><a href="#a2">Assignment 2</a></li>
+<li><a href="#gallery">Screenshots</a></li>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#run">How to run</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<button class="icon-btn theme-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
+<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+</button>
+</div>
+</header>
+<main id="main">
+<div class="hero" id="top">
+<div class="container">
+<span class="eyebrow">FAST-NUCES · Spring 2025 · CS-2006</span>
+<h1>Operating Systems – Shell Scripting</h1>
+<p class="lead">My Operating Systems lab work from Spring 2025. Two assignments: Bash scripts and a C string toolkit, then five C/C++ programs on processes, pipes, threads and CPU scheduling.</p>
+<div class="cta actions">
+<a class="btn btn-primary" href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener">Open the repository</a>
+<a class="btn btn-ghost" href="#gallery">View screenshots</a>
+</div>
+<div class="stats">
+<div class="stat"><b>2</b><span>Assignments</span></div>
+<div class="stat"><b>4</b><span>Bash scripts</span></div>
+<div class="stat"><b>11</b><span>C/C++ source files</span></div>
+<div class="stat"><b>6</b><span>Makefiles</span></div>
+</div>
+</div>
+</div>
+
+<section id="links">
+<div class="container">
+<h2 class="reveal">Live Links</h2>
+<p class="sub reveal">The repository, this page, and a ZIP download.</p>
+<div class="grid">
+<a class="card link-card reveal" href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">GH</span><div><h3>Repository</h3><small>https://github.com/rohaan2802/OS-ShellScripting</small></div></a>
+<a class="card link-card reveal" href="https://rohaan2802.github.io/OS-ShellScripting/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">Web</span><div><h3>Website</h3><small>https://rohaan2802.github.io/OS-ShellScripting/</small></div></a>
+<a class="card link-card reveal" href="https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip"><span class="ico" aria-hidden="true">ZIP</span><div><h3>Download (ZIP)</h3><small>https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip</small></div></a>
+</div>
+</div>
+</section>
+
+<section id="overview">
+<div class="container">
+<h2 class="reveal">Overview</h2>
+<p class="sub reveal">This is my CS-2006 Operating Systems lab work from Spring 2025 at FAST-NUCES. The assignment briefs sit next to the code in each folder.</p>
+<div class="grid">
+<div class="card reveal">
+<span class="tag">Assignment 1</span>
+<h3>Bash scripts and a C toolkit</h3>
+<p>A disk cleanup helper, a file-utility menu, an application-usage tracker, a personal expense ledger, and a C string toolkit that runs each task in a grandchild process with <code>fork</code> and <code>execlp</code>.</p>
+</div>
+<div class="card reveal">
+<span class="tag">Assignment 2</span>
+<h3>Processes, threads and scheduling</h3>
+<p>A zombie survival game with pipes, office-hour thread sync, a cricket lineup tool (SJF, SRTF, Round Robin), four processes talking in a circle, and a three-level multilevel feedback queue.</p>
+</div>
+<div class="card reveal">
+<span class="tag">Course</span>
+<h3>CS-2006 · Spring 2025</h3>
+<p>FAST-NUCES, section A, roll 22I-2327. The programs are written for Linux (Bash, gcc/g++ and POSIX).</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="a1">
+<div class="container">
+<h2 class="reveal">Assignment 1</h2>
+<p class="sub reveal">Four Bash scripts and a small C string toolkit. The original brief is in <a href="assignment-01/assignment-01.pdf">assignment-01.pdf</a>.</p>
+
+<details class="acc reveal" open>
+<summary><span class="num">Q01</span> Disk cleanup</summary>
+<p>Walks <code>$HOME</code>: the ten largest files (asks before deleting), a duplicate-file helper using MD5 (defined in the script, left commented in the default run), cache cleanup, and files not accessed in the last 10 days. <strong>The cache clean does not ask first.</strong> Do not run this on a machine you care about until you have read the script.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q01-disk-cleanup/q01-disk-cleanup.sh">q01-disk-cleanup.sh</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q02</span> File utilities</summary>
+<p>A menu: invert a file’s permissions, search a file (a dot in the pattern means any character), stitch the first <code>N</code> lines of even-positioned files and the last <code>N</code> lines of odd-positioned files into <code>dummy_file.txt</code>, and <code>touch</code> a file if its modification time is more than 24 hours old. Messages are also written to <code>text_file.txt</code>.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q02-file-utilities/q02-file-utilities.sh">q02-file-utilities.sh</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q03</span> Application usage</summary>
+<p>Every 10 seconds it reads the focused X11 window with <code>xdotool</code>, appends a line to <code>~/app_usage.log</code>, and prints a minutes-and-seconds report. After one minute on a listed app it sends a notification and runs <code>pkill</code>. Needs <code>xdotool</code> (and <code>notify-send</code> for the warning).</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q03-app-usage/q03-app-usage.sh">q03-app-usage.sh</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q04</span> String toolkit</summary>
+<p>You type one word. The parent writes it to <code>input.txt</code>, then for each task it double-forks and the grandchild runs a worker with <code>execlp</code>. Workers append to <code>output.txt</code> (task, PID, result). Option 6 prints that file. Run <code>make</code> so all six binaries sit in the same folder.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/main_file.c">main_file.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/reverse_str.c">reverse_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/length_str.c">length_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/ascii_add_2_str.c">ascii_add_2_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/sort_str.c">sort_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/capitalize_str.c">capitalize_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/Makefile">Makefile</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q05</span> Expense tracker</summary>
+<p>A ledger in <code>expenses.csv</code> (<code>date,category,amount</code>). You can add a row, print per-category totals and savings (income minus expenses), print the file, plot spending with gnuplot, and set a budget. A warning appears if expenses go over the budget.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q05-expense-tracker/q05-expense-tracker.sh">q05-expense-tracker.sh</a></li>
+</ul>
+</details>
+</div>
+</section>
+
+<section id="a2">
+<div class="container">
+<h2 class="reveal">Assignment 2</h2>
+<p class="sub reveal">Five C/C++ programs. The original brief is in <a href="assignment-02/assignment-02.pdf">assignment-02.pdf</a>.</p>
+
+<details class="acc reveal" open>
+<summary><span class="num">Q01</span> Zombie survival</summary>
+<p>A terminal game. The parent is the game manager. Each player and each zombie is a child process and talks through a pipe. After five turns the higher score wins. The zombie count comes from my roll number: <code>(2327 * 3) % 20 + 1</code>, which is 2.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q01-zombie-survival/zombie-survival.cpp">zombie-survival.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q01-zombie-survival/Makefile">Makefile</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q02</span> Office hours</summary>
+<p>A professor thread and one student thread per person. Students take turns asking a question; the professor waits, answers, and only then is the next student let through. Shared flags are <code>std::atomic</code> — no mutexes or semaphores, as the brief asked.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q02-office-hours/office-hours.cpp">office-hours.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q02-office-hours/Makefile">Makefile</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q03</span> Cricket scheduling</summary>
+<p>You enter batsmen and bowlers. For batting, SJF orders by strike rate and SRTF by average, then a predicted team score is printed. For bowling, SJF uses economy, SRTF uses wickets, and Round Robin rotates bowlers over a number of overs.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q03-cricket-scheduling/cricket-scheduling.cpp">cricket-scheduling.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q03-cricket-scheduling/Makefile">Makefile</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q04</span> Circular pipes</summary>
+<p>Four processes, A → B → C → D → A, connected by unnamed pipes. Process A starts a message. Each of B, C and D appends a note, writes its own log file (<code>log_A.txt</code> … <code>log_D.txt</code>), and passes the result on. A prints the fully modified message when it comes back.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q04-circular-pipes/circular-pipes.c">circular-pipes.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q04-circular-pipes/Makefile">Makefile</a></li>
+</ul>
+</details>
+
+<details class="acc reveal">
+<summary><span class="num">Q05</span> Multilevel feedback queue</summary>
+<p>Three queues: Round Robin with quantum 4, Round Robin with quantum 8, then FCFS to completion. You enter each process’s PID, arrival time and burst time. The program prints turnaround time and waiting time.</p>
+<ul class="files">
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q05-mfq-scheduler/mfq-scheduler.cpp">mfq-scheduler.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q05-mfq-scheduler/Makefile">Makefile</a></li>
+</ul>
+</details>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<h2 class="reveal">Screenshots</h2>
+<p class="sub reveal">Runs of the scripts and programs, the two assignment briefs, and this page. Click a picture to enlarge it; use the arrow keys to move between them.</p>
+<div class="toolbar reveal" role="group" aria-label="Filter screenshots">
+<button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="chip" type="button" data-filter="a1" aria-pressed="false">Assignment 1</button>
+<button class="chip" type="button" data-filter="a2" aria-pressed="false">Assignment 2</button>
+<button class="chip" type="button" data-filter="site" aria-pressed="false">Website</button>
+</div>
+<div class="search reveal" role="search">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+<input id="search" type="search" placeholder="Search screenshots" autocomplete="off">
+</div>
+<div class="gallery">
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/01-repository-structure.png"><button type="button" aria-label="Enlarge: Repository folder structure"><div class="thumb"><img src="screenshots/01-repository-structure.png" alt="Repository folder structure" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>1. Repository folder structure<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/02-assignment-01-brief.png"><button type="button" aria-label="Enlarge: Assignment 1 brief"><div class="thumb"><img src="screenshots/02-assignment-01-brief.png" alt="Assignment 1 brief" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>2. Assignment 1 brief<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/03-q01-largest-files.png"><button type="button" aria-label="Enlarge: Disk cleanup script output"><div class="thumb"><img src="screenshots/03-q01-largest-files.png" alt="Disk cleanup script output" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>3. Disk cleanup script output<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/05-q02-main-menu.png"><button type="button" aria-label="Enlarge: File utilities main menu"><div class="thumb"><img src="screenshots/05-q02-main-menu.png" alt="File utilities main menu" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>4. File utilities main menu<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/06-q02-invert-permissions.png"><button type="button" aria-label="Enlarge: Invert file permissions"><div class="thumb"><img src="screenshots/06-q02-invert-permissions.png" alt="Invert file permissions" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>5. Invert file permissions<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/07-q02-search-string.png"><button type="button" aria-label="Enlarge: Search with a wildcard"><div class="thumb"><img src="screenshots/07-q02-search-string.png" alt="Search with a wildcard" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>6. Search with a wildcard (c.t)<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/08-q02-copy-content.png"><button type="button" aria-label="Enlarge: Copy first and last N lines"><div class="thumb"><img src="screenshots/08-q02-copy-content.png" alt="Copy first and last N lines" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>7. Copy first and last N lines<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/09-q02-modified-date.png"><button type="button" aria-label="Enlarge: Update a stale modified date"><div class="thumb"><img src="screenshots/09-q02-modified-date.png" alt="Update a stale modified date" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>8. Update a stale modified date<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/10-q03-usage-report.png"><button type="button" aria-label="Enlarge: Application usage report"><div class="thumb"><img src="screenshots/10-q03-usage-report.png" alt="Application usage report" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>9. Application usage report<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/11-q04-string-menu.png"><button type="button" aria-label="Enlarge: String toolkit menu"><div class="thumb"><img src="screenshots/11-q04-string-menu.png" alt="String toolkit menu" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>10. String toolkit menu<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/12-q04-string-results.png"><button type="button" aria-label="Enlarge: String toolkit results"><div class="thumb"><img src="screenshots/12-q04-string-results.png" alt="String toolkit results" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>11. String toolkit results<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/13-q05-add-and-summary.png"><button type="button" aria-label="Enlarge: Expense tracker add and summary"><div class="thumb"><img src="screenshots/13-q05-add-and-summary.png" alt="Expense tracker add and summary" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>12. Expense tracker – add and summary<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/14-q05-budget-alert.png"><button type="button" aria-label="Enlarge: Budget alert"><div class="thumb"><img src="screenshots/14-q05-budget-alert.png" alt="Budget alert" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>13. Budget alert<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a1" data-full="screenshots/15-q05-spending-trend.png"><button type="button" aria-label="Enlarge: Spending trend graph"><div class="thumb"><img src="screenshots/15-q05-spending-trend.png" alt="Spending trend graph" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>14. Spending trend graph<span>Assignment 1</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/16-assignment-02-brief.png"><button type="button" aria-label="Enlarge: Assignment 2 brief"><div class="thumb"><img src="screenshots/16-assignment-02-brief.png" alt="Assignment 2 brief" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>15. Assignment 2 brief<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/17-q01-zombie-survival.png"><button type="button" aria-label="Enlarge: Zombie survival game"><div class="thumb"><img src="screenshots/17-q01-zombie-survival.png" alt="Zombie survival game" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>16. Zombie survival game<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/18-q02-office-hours.png"><button type="button" aria-label="Enlarge: Office hours"><div class="thumb"><img src="screenshots/18-q02-office-hours.png" alt="Office hours" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>17. Office hours (professor and student)<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/19-q03-cricket-batting.png"><button type="button" aria-label="Enlarge: Cricket batting order"><div class="thumb"><img src="screenshots/19-q03-cricket-batting.png" alt="Cricket batting order" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>18. Cricket batting order (SJF)<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/19b-q03-cricket-bowling.png"><button type="button" aria-label="Enlarge: Cricket bowling rotation"><div class="thumb"><img src="screenshots/19b-q03-cricket-bowling.png" alt="Cricket bowling rotation" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>19. Cricket bowling rotation (Round Robin)<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/20-q04-circular-pipes.png"><button type="button" aria-label="Enlarge: Circular pipe message passing"><div class="thumb"><img src="screenshots/20-q04-circular-pipes.png" alt="Circular pipe message passing" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>20. Circular pipe message passing<span>Assignment 2</span></figcaption></button></figure>
+
+<figure class="shot reveal" data-cat="a2" data-full="screenshots/21-q05-mfq-scheduler.png"><button type="button" aria-label="Enlarge: Multilevel feedback queue stats"><div class="thumb"><img src="screenshots/21-q05-mfq-scheduler.png" alt="Multilevel feedback queue stats" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>21. Multilevel feedback queue stats<span>Assignment 2</span></figcaption></button></figure>
+<figure class="shot reveal" data-cat="site" data-full="screenshots/22-website-hero-dark.png"><button type="button" aria-label="Enlarge: Website home, dark theme"><div class="thumb"><img src="screenshots/22-website-hero-dark.png" alt="Website home, dark theme" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>22. Website home (dark theme)<span>Website</span></figcaption></button></figure>
+<figure class="shot reveal" data-cat="site" data-full="screenshots/23-website-hero-light.png"><button type="button" aria-label="Enlarge: Website home, light theme"><div class="thumb"><img src="screenshots/23-website-hero-light.png" alt="Website home, light theme" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>23. Website home (light theme)<span>Website</span></figcaption></button></figure>
+<figure class="shot reveal" data-cat="site" data-full="screenshots/24-website-mobile.png"><button type="button" aria-label="Enlarge: Website on a phone"><div class="thumb"><img src="screenshots/24-website-mobile.png" alt="Website on a phone" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>24. Website on a phone<span>Website</span></figcaption></button></figure>
+<figure class="shot reveal" data-cat="site" data-full="screenshots/25-website-assignment-1.png"><button type="button" aria-label="Enlarge: Assignment 1 section on the website"><div class="thumb"><img src="screenshots/25-website-assignment-1.png" alt="Assignment 1 section on the website" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption>25. Assignment 1 section on the website<span>Website</span></figcaption></button></figure>
+
+</div>
+<p id="no-results" style="display:none">No screenshots match your search.</p>
+</div>
+</section>
+
+<section id="structure">
+<div class="container">
+<h2 class="reveal">Folder Structure</h2>
+<div class="code-wrap tree-wrap">
+<div class="code-bar"><span class="code-label">Folder structure</span><button type="button" class="copy" aria-label="Copy folder structure">Copy</button></div>
+<pre class="tree reveal" tabindex="0" aria-label="Folder structure"><code>OS-ShellScripting/
+├── assignment-01/
+│   ├── assignment-01.pdf
+│   ├── q01-disk-cleanup/
+│   │   └── q01-disk-cleanup.sh
+│   ├── q02-file-utilities/
+│   │   └── q02-file-utilities.sh
+│   ├── q03-app-usage/
+│   │   └── q03-app-usage.sh
+│   ├── q04-string-toolkit/
+│   │   ├── Makefile
+│   │   ├── main_file.c
+│   │   ├── reverse_str.c
+│   │   ├── length_str.c
+│   │   ├── ascii_add_2_str.c
+│   │   ├── sort_str.c
+│   │   └── capitalize_str.c
+│   └── q05-expense-tracker/
+│       └── q05-expense-tracker.sh
+├── assignment-02/
+│   ├── assignment-02.pdf
+│   ├── q01-zombie-survival/
+│   │   ├── Makefile
+│   │   └── zombie-survival.cpp
+│   ├── q02-office-hours/
+│   │   ├── Makefile
+│   │   └── office-hours.cpp
+│   ├── q03-cricket-scheduling/
+│   │   ├── Makefile
+│   │   └── cricket-scheduling.cpp
+│   ├── q04-circular-pipes/
+│   │   ├── Makefile
+│   │   └── circular-pipes.c
+│   └── q05-mfq-scheduler/
+│       ├── Makefile
+│       └── mfq-scheduler.cpp
+├── screenshots/
+├── assets/
+│   ├── css/style.css
+│   ├── js/main.js
+│   ├── favicon.svg
+│   └── og-image.png
+├── index.html
+├── LICENSE
+└── README.md</code></pre>
+</div>
+</div>
+</section>
+
+<section id="run">
+<div class="container">
+<h2 class="reveal">How to Run</h2>
+<p class="sub reveal">Linux or WSL, with Bash, gcc and g++. The C programs use POSIX calls, so they are meant for Linux, not plain Windows.</p>
+
+<h3 class="reveal">Clone the repository</h3>
+<div class="code-wrap">
+<div class="code-bar"><span class="code-label">bash</span><button type="button" class="copy" aria-label="Copy clone command">Copy</button></div>
+<pre class="code" tabindex="0"><code>git clone https://github.com/rohaan2802/OS-ShellScripting.git
+cd OS-ShellScripting</code></pre>
+</div>
+
+<h3 class="reveal">Assignment 1 – a Bash script</h3>
+<div class="code-wrap">
+<div class="code-bar"><span class="code-label">bash</span><button type="button" class="copy" aria-label="Copy Bash run commands">Copy</button></div>
+<pre class="code" tabindex="0"><code>cd assignment-01/q02-file-utilities
+chmod +x q02-file-utilities.sh
+./q02-file-utilities.sh</code></pre>
+</div>
+
+<h3 class="reveal">Assignment 1 – the C string toolkit</h3>
+<div class="code-wrap">
+<div class="code-bar"><span class="code-label">bash</span><button type="button" class="copy" aria-label="Copy string toolkit commands">Copy</button></div>
+<pre class="code" tabindex="0"><code>cd assignment-01/q04-string-toolkit
+make
+./main_file</code></pre>
+</div>
+
+<h3 class="reveal">Assignment 2 – any of the five programs</h3>
+<div class="code-wrap">
+<div class="code-bar"><span class="code-label">bash</span><button type="button" class="copy" aria-label="Copy Assignment 2 commands">Copy</button></div>
+<pre class="code" tabindex="0"><code>cd assignment-02/q01-zombie-survival
+make
+./zombie-survival</code></pre>
+</div>
+<p>The office-hours program is already linked with <code>-pthread</code> in its Makefile. The disk-cleanup script can delete files — read it before you run it. Q03 needs <code>xdotool</code>. Q05’s graph needs gnuplot.</p>
+</div>
+</section>
+
+<section id="license">
+<div class="container">
+<h2 class="reveal">License</h2>
+<p class="reveal">The code I wrote is under the <a href="LICENSE">MIT License</a>. The assignment PDFs belong to their instructors at FAST-NUCES and are here only for reference with this lab work.</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<p><strong>Mohammad Rohaan</strong> · BS Computer Science, FAST-NUCES · <a href="https://github.com/rohaan2802" target="_blank" rel="noopener">github.com/rohaan2802</a> · <a href="mailto:m.rohaanarshad@gmail.com">m.rohaanarshad@gmail.com</a></p>
+<p>If this helped you with the OS lab, a star on the <a href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener">repository</a> is appreciated.</p>
+</div>
+</footer>
+<button class="icon-btn to-top" id="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+<button class="lb-btn close" type="button" aria-label="Close">&#x2715;</button>
+<button class="lb-btn prev" type="button" aria-label="Previous screenshot">&#x2039;</button>
+<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1600" height="1000">
+<button class="lb-btn next" type="button" aria-label="Next screenshot">&#x203A;</button>
+<p></p>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
