@@ -309,9 +309,9 @@ details.acc > ul.files{padding-bottom:20px}
 /* Lightbox sits on a dark field, not a white letterbox */
 .lb img{background:#0a1210}
 
-/* Copy buttons: 44px target, and on a phone keep to-top off them */
+/* Copy buttons: 44px target */
 .code-wrap .copy{min-height:44px}
 @media (max-width:768px){
-  .to-top,#back-to-top,.back-top{display:none}
+  .to-top{right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom));width:44px;height:44px}
   .code-wrap pre.code,.code-wrap pre.tree{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
 }
