@@ -26,8 +26,10 @@
     b.appendChild(sp);setTimeout(function(){sp.remove()},650)});
 
   var top=document.getElementById('to-top');
-  window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>700)},{passive:true});
-  top.addEventListener('click',function(){window.scrollTo({top:0})});
+  function y(){return Math.max(window.scrollY||0,document.documentElement.scrollTop||0,document.body.scrollTop||0)}
+  function upd(){top.classList.toggle('show',y()>400)}
+  document.addEventListener('scroll',upd,{passive:true,capture:true});upd();
+  top.addEventListener('click',function(){window.scrollTo({top:0});document.documentElement.scrollTop=0;document.body.scrollTop=0});
 
   document.querySelectorAll('.code-wrap').forEach(function(w){
     var b=w.querySelector('.copy'),pre=w.querySelector('pre');
