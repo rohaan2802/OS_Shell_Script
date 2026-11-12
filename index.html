@@ -7,12 +7,12 @@
 <meta name="description" content="Operating Systems lab work from Spring 2025 at FAST-NUCES: Bash scripts and C/C++ programs on processes, pipes, threads and CPU scheduling.">
 <meta name="author" content="Mohammad Rohaan">
 <meta name="theme-color" content="#f3f7f6">
-<link rel="canonical" href="https://rohaan2802.github.io/OS-ShellScripting/">
+<link rel="canonical" href="https://rohaan2802.github.io/OS_Shell_Script/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Operating Systems – Shell Scripting (CS-2006)">
 <meta property="og:description" content="Bash scripts and C/C++ programs on processes, pipes, threads and CPU scheduling – CS-2006, FAST-NUCES, Spring 2025.">
-<meta property="og:url" content="https://rohaan2802.github.io/OS-ShellScripting/">
-<meta property="og:image" content="https://rohaan2802.github.io/OS-ShellScripting/assets/og-image.png">
+<meta property="og:url" content="https://rohaan2802.github.io/OS_Shell_Script/">
+<meta property="og:image" content="https://rohaan2802.github.io/OS_Shell_Script/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -50,7 +50,7 @@
 <h1>Operating Systems – Shell Scripting</h1>
 <p class="lead">My Operating Systems lab work from Spring 2025. Two assignments: Bash scripts and a C string toolkit, then five C/C++ programs on processes, pipes, threads and CPU scheduling.</p>
 <div class="cta actions">
-<a class="btn btn-primary" href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener">Open the repository</a>
+<a class="btn btn-primary" href="https://github.com/rohaan2802/OS_Shell_Script" target="_blank" rel="noopener">Open the repository</a>
 <a class="btn btn-ghost" href="#gallery">View screenshots</a>
 </div>
 <div class="stats">
@@ -67,9 +67,9 @@
 <h2 class="reveal">Live Links</h2>
 <p class="sub reveal">The repository, this page, and a ZIP download.</p>
 <div class="grid">
-<a class="card link-card reveal" href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">GH</span><div><h3>Repository</h3><small>https://github.com/rohaan2802/OS-ShellScripting</small></div></a>
-<a class="card link-card reveal" href="https://rohaan2802.github.io/OS-ShellScripting/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">Web</span><div><h3>Website</h3><small>https://rohaan2802.github.io/OS-ShellScripting/</small></div></a>
-<a class="card link-card reveal" href="https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip"><span class="ico" aria-hidden="true">ZIP</span><div><h3>Download (ZIP)</h3><small>https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip</small></div></a>
+<a class="card link-card reveal" href="https://github.com/rohaan2802/OS_Shell_Script" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">GH</span><div><h3>Repository</h3><small>https://github.com/rohaan2802/OS_Shell_Script</small></div></a>
+<a class="card link-card reveal" href="https://rohaan2802.github.io/OS_Shell_Script/" target="_blank" rel="noopener"><span class="ico" aria-hidden="true">Web</span><div><h3>Website</h3><small>https://rohaan2802.github.io/OS_Shell_Script/</small></div></a>
+<a class="card link-card reveal" href="https://github.com/rohaan2802/OS_Shell_Script/archive/refs/heads/main.zip"><span class="ico" aria-hidden="true">ZIP</span><div><h3>Download (ZIP)</h3><small>https://github.com/rohaan2802/OS_Shell_Script/archive/refs/heads/main.zip</small></div></a>
 </div>
 </div>
 </section>
@@ -107,7 +107,7 @@
 <summary><span class="num">Q01</span> Disk cleanup</summary>
 <p>Walks <code>$HOME</code>: the ten largest files (asks before deleting), a duplicate-file helper using MD5 (defined in the script, left commented in the default run), cache cleanup, and files not accessed in the last 10 days. <strong>The cache clean does not ask first.</strong> Do not run this on a machine you care about until you have read the script.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q01-disk-cleanup/q01-disk-cleanup.sh">q01-disk-cleanup.sh</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q01-disk-cleanup/q01-disk-cleanup.sh">q01-disk-cleanup.sh</a></li>
 </ul>
 </details>
 
@@ -115,7 +115,7 @@
 <summary><span class="num">Q02</span> File utilities</summary>
 <p>A menu: invert a file’s permissions, search a file (a dot in the pattern means any character), stitch the first <code>N</code> lines of even-positioned files and the last <code>N</code> lines of odd-positioned files into <code>dummy_file.txt</code>, and <code>touch</code> a file if its modification time is more than 24 hours old. Messages are also written to <code>text_file.txt</code>.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q02-file-utilities/q02-file-utilities.sh">q02-file-utilities.sh</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q02-file-utilities/q02-file-utilities.sh">q02-file-utilities.sh</a></li>
 </ul>
 </details>
 
@@ -123,7 +123,7 @@
 <summary><span class="num">Q03</span> Application usage</summary>
 <p>Every 10 seconds it reads the focused X11 window with <code>xdotool</code>, appends a line to <code>~/app_usage.log</code>, and prints a minutes-and-seconds report. After one minute on a listed app it sends a notification and runs <code>pkill</code>. Needs <code>xdotool</code> (and <code>notify-send</code> for the warning).</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q03-app-usage/q03-app-usage.sh">q03-app-usage.sh</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q03-app-usage/q03-app-usage.sh">q03-app-usage.sh</a></li>
 </ul>
 </details>
 
@@ -131,13 +131,13 @@
 <summary><span class="num">Q04</span> String toolkit</summary>
 <p>You type one word. The parent writes it to <code>input.txt</code>, then for each task it double-forks and the grandchild runs a worker with <code>execlp</code>. Workers append to <code>output.txt</code> (task, PID, result). Option 6 prints that file. Run <code>make</code> so all six binaries sit in the same folder.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/main_file.c">main_file.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/reverse_str.c">reverse_str.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/length_str.c">length_str.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/ascii_add_2_str.c">ascii_add_2_str.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/sort_str.c">sort_str.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/capitalize_str.c">capitalize_str.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q04-string-toolkit/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/main_file.c">main_file.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/reverse_str.c">reverse_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/length_str.c">length_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/ascii_add_2_str.c">ascii_add_2_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/sort_str.c">sort_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/capitalize_str.c">capitalize_str.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q04-string-toolkit/Makefile">Makefile</a></li>
 </ul>
 </details>
 
@@ -145,7 +145,7 @@
 <summary><span class="num">Q05</span> Expense tracker</summary>
 <p>A ledger in <code>expenses.csv</code> (<code>date,category,amount</code>). You can add a row, print per-category totals and savings (income minus expenses), print the file, plot spending with gnuplot, and set a budget. A warning appears if expenses go over the budget.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-01/q05-expense-tracker/q05-expense-tracker.sh">q05-expense-tracker.sh</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-01/q05-expense-tracker/q05-expense-tracker.sh">q05-expense-tracker.sh</a></li>
 </ul>
 </details>
 </div>
@@ -160,8 +160,8 @@
 <summary><span class="num">Q01</span> Zombie survival</summary>
 <p>A terminal game. The parent is the game manager. Each player and each zombie is a child process and talks through a pipe. After five turns the higher score wins. The zombie count comes from my roll number: <code>(2327 * 3) % 20 + 1</code>, which is 2.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q01-zombie-survival/zombie-survival.cpp">zombie-survival.cpp</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q01-zombie-survival/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q01-zombie-survival/zombie-survival.cpp">zombie-survival.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q01-zombie-survival/Makefile">Makefile</a></li>
 </ul>
 </details>
 
@@ -169,8 +169,8 @@
 <summary><span class="num">Q02</span> Office hours</summary>
 <p>A professor thread and one student thread per person. Students take turns asking a question; the professor waits, answers, and only then is the next student let through. Shared flags are <code>std::atomic</code> — no mutexes or semaphores, as the brief asked.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q02-office-hours/office-hours.cpp">office-hours.cpp</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q02-office-hours/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q02-office-hours/office-hours.cpp">office-hours.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q02-office-hours/Makefile">Makefile</a></li>
 </ul>
 </details>
 
@@ -178,8 +178,8 @@
 <summary><span class="num">Q03</span> Cricket scheduling</summary>
 <p>You enter batsmen and bowlers. For batting, SJF orders by strike rate and SRTF by average, then a predicted team score is printed. For bowling, SJF uses economy, SRTF uses wickets, and Round Robin rotates bowlers over a number of overs.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q03-cricket-scheduling/cricket-scheduling.cpp">cricket-scheduling.cpp</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q03-cricket-scheduling/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q03-cricket-scheduling/cricket-scheduling.cpp">cricket-scheduling.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q03-cricket-scheduling/Makefile">Makefile</a></li>
 </ul>
 </details>
 
@@ -187,8 +187,8 @@
 <summary><span class="num">Q04</span> Circular pipes</summary>
 <p>Four processes, A → B → C → D → A, connected by unnamed pipes. Process A starts a message. Each of B, C and D appends a note, writes its own log file (<code>log_A.txt</code> … <code>log_D.txt</code>), and passes the result on. A prints the fully modified message when it comes back.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q04-circular-pipes/circular-pipes.c">circular-pipes.c</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q04-circular-pipes/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q04-circular-pipes/circular-pipes.c">circular-pipes.c</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q04-circular-pipes/Makefile">Makefile</a></li>
 </ul>
 </details>
 
@@ -196,8 +196,8 @@
 <summary><span class="num">Q05</span> Multilevel feedback queue</summary>
 <p>Three queues: Round Robin with quantum 4, Round Robin with quantum 8, then FCFS to completion. You enter each process’s PID, arrival time and burst time. The program prints turnaround time and waiting time.</p>
 <ul class="files">
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q05-mfq-scheduler/mfq-scheduler.cpp">mfq-scheduler.cpp</a></li>
-<li><a href="https://github.com/rohaan2802/OS-ShellScripting/blob/main/assignment-02/q05-mfq-scheduler/Makefile">Makefile</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q05-mfq-scheduler/mfq-scheduler.cpp">mfq-scheduler.cpp</a></li>
+<li><a href="https://github.com/rohaan2802/OS_Shell_Script/blob/main/assignment-02/q05-mfq-scheduler/Makefile">Makefile</a></li>
 </ul>
 </details>
 </div>
@@ -275,7 +275,7 @@
 <h2 class="reveal">Folder Structure</h2>
 <div class="code-wrap tree-wrap">
 <div class="code-bar"><span class="code-label">Folder structure</span><button type="button" class="copy" aria-label="Copy folder structure">Copy</button></div>
-<pre class="tree reveal" tabindex="0" aria-label="Folder structure"><code>OS-ShellScripting/
+<pre class="tree reveal" tabindex="0" aria-label="Folder structure"><code>OS_Shell_Script/
 ├── assignment-01/
 │   ├── assignment-01.pdf
 │   ├── q01-disk-cleanup/
@@ -332,8 +332,8 @@
 <h3 class="reveal">Clone the repository</h3>
 <div class="code-wrap">
 <div class="code-bar"><span class="code-label">bash</span><button type="button" class="copy" aria-label="Copy clone command">Copy</button></div>
-<pre class="code" tabindex="0"><code>git clone https://github.com/rohaan2802/OS-ShellScripting.git
-cd OS-ShellScripting</code></pre>
+<pre class="code" tabindex="0"><code>git clone https://github.com/rohaan2802/OS_Shell_Script.git
+cd OS_Shell_Script</code></pre>
 </div>
 
 <h3 class="reveal">Assignment 1 – a Bash script</h3>
@@ -373,7 +373,7 @@ make
 <footer>
 <div class="container">
 <p><strong>Mohammad Rohaan</strong> · BS Computer Science, FAST-NUCES · <a href="https://github.com/rohaan2802" target="_blank" rel="noopener">github.com/rohaan2802</a> · <a href="mailto:m.rohaanarshad@gmail.com">m.rohaanarshad@gmail.com</a></p>
-<p>If this helped you with the OS lab, a star on the <a href="https://github.com/rohaan2802/OS-ShellScripting" target="_blank" rel="noopener">repository</a> is appreciated.</p>
+<p>If this helped you with the OS lab, a star on the <a href="https://github.com/rohaan2802/OS_Shell_Script" target="_blank" rel="noopener">repository</a> is appreciated.</p>
 </div>
 </footer>
 <button class="icon-btn to-top" id="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>

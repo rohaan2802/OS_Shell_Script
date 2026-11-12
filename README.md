@@ -2,9 +2,9 @@
 
 **Operating Systems lab work from Spring 2025 at FAST-NUCES – Bash scripts and C/C++ programs on processes, pipes, threads and CPU scheduling.**
 
-[![Language](https://img.shields.io/badge/Language-Bash%20%2B%20C%2FC%2B%2B-0f5c55?style=for-the-badge)](https://github.com/rohaan2802/OS-ShellScripting)
-[![Course](https://img.shields.io/badge/Course-CS--2006-9a4a0c?style=for-the-badge)](https://github.com/rohaan2802/OS-ShellScripting)
-[![University](https://img.shields.io/badge/FAST--NUCES-Spring%202025-0f5c55?style=for-the-badge)](https://github.com/rohaan2802/OS-ShellScripting)
+[![Language](https://img.shields.io/badge/Language-Bash%20%2B%20C%2FC%2B%2B-0f5c55?style=for-the-badge)](https://github.com/rohaan2802/OS_Shell_Script)
+[![Course](https://img.shields.io/badge/Course-CS--2006-9a4a0c?style=for-the-badge)](https://github.com/rohaan2802/OS_Shell_Script)
+[![University](https://img.shields.io/badge/FAST--NUCES-Spring%202025-0f5c55?style=for-the-badge)](https://github.com/rohaan2802/OS_Shell_Script)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 ---
@@ -13,9 +13,9 @@
 
 | What | Link |
 |------|------|
-| Repository | [https://github.com/rohaan2802/OS-ShellScripting](https://github.com/rohaan2802/OS-ShellScripting) |
-| Website (GitHub Pages) | [https://rohaan2802.github.io/OS-ShellScripting/](https://rohaan2802.github.io/OS-ShellScripting/) |
-| Download (ZIP) | [https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip](https://github.com/rohaan2802/OS-ShellScripting/archive/refs/heads/main.zip) |
+| Repository | [https://github.com/rohaan2802/OS_Shell_Script](https://github.com/rohaan2802/OS_Shell_Script) |
+| Website (GitHub Pages) | [https://rohaan2802.github.io/OS_Shell_Script/](https://rohaan2802.github.io/OS_Shell_Script/) |
+| Download (ZIP) | [https://github.com/rohaan2802/OS_Shell_Script/archive/refs/heads/main.zip](https://github.com/rohaan2802/OS_Shell_Script/archive/refs/heads/main.zip) |
 
 ---
 
@@ -289,7 +289,7 @@ PROCESS 4 -> TURNAROUND TIME: 40, WAITING TIME: 28
 ## Folder Structure
 
 ```
-OS-ShellScripting/
+OS_Shell_Script/
 ├── assignment-01/
 │   ├── assignment-01.pdf
 │   ├── q01-disk-cleanup/
@@ -343,8 +343,8 @@ OS-ShellScripting/
 You need a Linux environment (or WSL) with Bash, `gcc` and `g++`. The C programs use POSIX calls (`fork`, `pipe`, `execlp`, pthreads), so they are meant to run on Linux, not plain Windows.
 
 ```bash
-git clone https://github.com/rohaan2802/OS-ShellScripting.git
-cd OS-ShellScripting
+git clone https://github.com/rohaan2802/OS_Shell_Script.git
+cd OS_Shell_Script
 ```
 
 Each C/C++ folder has a Makefile:
@@ -473,7 +473,7 @@ Runtime files such as `expenses.csv`, `output.txt` and `log_A.txt` are produced 
 
 ## License
 
-The code I wrote is under the [MIT License](LICENSE). The assignment PDFs belong to their instructors at FAST-NUCES and are here only for reference with this lab work. If you are an owner and want something removed, please open an [issue](https://github.com/rohaan2802/OS-ShellScripting/issues).
+The code I wrote is under the [MIT License](LICENSE). The assignment PDFs belong to their instructors at FAST-NUCES and are here only for reference with this lab work. If you are an owner and want something removed, please open an [issue](https://github.com/rohaan2802/OS_Shell_Script/issues).
 
 ---
 
